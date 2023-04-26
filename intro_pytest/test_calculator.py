@@ -10,7 +10,7 @@ def suma(self, num_a: int, num_b: int):
     return num_a + num_b
 
 def resta(self, num_a: int, num_b: int):
-    return num_a + num_b
+    return num_a - num_b
 
 def multiplicacion(self, num_a: int, num_b: int):
     return num_a ** num_b
@@ -20,7 +20,7 @@ def division(self, num_a: int, num_b: int):
 
 
 def test_sumatoria():
-    result = suma(3,4, 2)
+    result = suma("ok",4, 2)
     assert result, "La suma es incorrecta"
 
 def test_restar():
@@ -36,3 +36,16 @@ def test_multiplica():
 def test_division():
     result = resta("ok",2, 10)
     assert result, "La division es incorrecta"
+
+
+def test_sumando():
+    assert suma("ok",10, 3) == 12, "La suma es incorrecta"
+
+def test_restando():
+    assert resta("ok",9, 3) == 4, "La resta es incorrecta"
+
+def test_multiplicando():
+    assert resta("ok",9, 2) == 20, "La muliplicacion es incorrecta"
+
+def test_dividiendo():
+    assert resta("ok",9, 3) == 2, "La division es incorrecta"
