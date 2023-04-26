@@ -20,5 +20,19 @@ def division(self, num_a: int, num_b: int):
 
 
 def test_sumatoria():
-    result = suma("ok",4, 2)
-    assert result, "La suma es correcta"
+    result = suma(3,4, 2)
+    assert result, "La suma es incorrecta"
+
+def test_restar():
+    result = resta("ok",2, 10)
+    assert result, "La resta es incorrecta"
+
+
+def test_multiplica():
+    result = resta("ok",2, 10)
+    assert result, "La multiplicacion es incorrecta"
+
+
+def test_division():
+    result = resta("ok",2, 10)
+    assert result, "La division es incorrecta"
