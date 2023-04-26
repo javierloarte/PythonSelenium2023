@@ -3,8 +3,8 @@ import pytest
 
 class Calculadora:
 
-def __init__(self):
-    pass
+    def __init__(self):
+        pass
 
 def suma(self, num_a: int, num_b: int):
     return num_a + num_b
