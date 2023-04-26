@@ -20,3 +20,6 @@ class Calculadora:
        return num_a // num_b
 
 
+def test_sumatoria():
+    result = suma(4, 2)
+    assert result, "La suma es correcta"
