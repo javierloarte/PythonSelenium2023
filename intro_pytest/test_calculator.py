@@ -20,5 +20,5 @@ def division(self, num_a: int, num_b: int):
 
 
 def test_sumatoria():
-    result = suma(4, 2)
+    result = suma("ok",4, 2)
     assert result, "La suma es correcta"
