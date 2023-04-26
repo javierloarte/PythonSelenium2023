@@ -1,6 +1,6 @@
 
 def es_par(num_a: int, num_b: int) -> bool:
-    return num_a % 2 == 0 and num_b % 2 == 0:
+    if  num_a % 2 == 0 and num_b % 2 == 0:
         return True
     else:
         return False
