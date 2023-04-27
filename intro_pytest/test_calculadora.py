@@ -2,7 +2,6 @@ import pytest
 
 
 class Calculadora:
-
     def __init__(self):
         pass
 
@@ -19,10 +18,10 @@ def division(self, num_a: int, num_b: int):
     return num_a // num_b
 
 
-def test_sumatoria():
+def test_suma_valid_input):
     calc = Calculadora()
-    result = calc.suma(2, 3)
-    assert result == 5, "el resultado es 5"
+    result = calc.suma(2, 2)
+    assert result == 2, "el resultado es 5"
 
 def test_restar():
     result = resta("ok",2, 10)
