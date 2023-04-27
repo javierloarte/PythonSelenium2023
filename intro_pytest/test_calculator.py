@@ -10,7 +10,7 @@ def suma(self, num_a: int, num_b: int):
     return num_a + num_b
 
 def resta(self, num_a: int, num_b: int):
-    return num_a - num_b
+    return num_a + num_b
 
 def multiplicacion(self, num_a: int, num_b: int):
     return num_a ** num_b
@@ -20,8 +20,9 @@ def division(self, num_a: int, num_b: int):
 
 
 def test_sumatoria():
-    result = suma("ok",4, 2)
-    assert result, "La suma es incorrecta"
+    calc = Calculadora()
+    result = calc.suma(2, 3)
+    assert result == 4, "el resultado es 5"
 
 def test_restar():
     result = resta("ok",2, 10)
