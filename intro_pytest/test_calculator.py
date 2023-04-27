@@ -1,6 +1,5 @@
 import pytest
 
-
 class Calculadora:
     def __init__(self):
         pass
@@ -18,7 +17,7 @@ def division(self, num_a: int, num_b: int):
     return num_a // num_b
 
 
-def test_suma_valid_input):
+def test_suma_valid_input():
     calc = Calculadora()
     result = calc.suma(2, 2)
     assert result == 2, "el resultado es 5"
