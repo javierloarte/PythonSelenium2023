@@ -20,16 +20,16 @@ class Calculadora:
 ## ///////////////////////////////////////////////////////////////////////
 ## Validacion
 ## ///////////////////////////////////////////////////////////////////////
+calc = Calculadora()
 
-def test_sumando():
-    calc = Calculadora()
+def test_suma_valores():
     assert calc.suma( 10, 3) == 13, "La suma es incorrecta"
 
-def test_restando():
-    assert resta( 9, 3) == 4, "La resta es incorrecta"
+def test_resta_valores():
+    assert calc.resta( 9, 3) == 6, "La resta es incorrecta"
 
-def test_multiplicando():
-    assert resta( 9, 2) == 20, "La muliplicacion es incorrecta"
+def test_multiplica_valores():
+    assert calc.multiplicacion( 9, 2) == 18, "La muliplicacion es incorrecta"
 
-def test_dividiendo():
-    assert resta( 9, 3) == 2, "La division es incorrecta"
+def test_divide_valores():
+    assert calc.division( 12, 3) == 4, "La division es incorrecta"
