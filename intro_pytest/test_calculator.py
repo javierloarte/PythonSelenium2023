@@ -2,9 +2,9 @@ import pytest
 
 class Calculadora:
     def __init__(self):
-        self.suma = suma()
+        pass
 
-def suma(self, num_a: int, num_b: int):
+def suma(num_a: int, num_b: int):
     return num_a + num_b
 
 def resta(self, num_a: int, num_b: int):
