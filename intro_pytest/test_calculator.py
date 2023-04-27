@@ -23,28 +23,28 @@ def test_suma_valid_input():
     assert result == 2, "el resultado es 5"
 
 def test_restar():
-    result = resta("ok",2, 10)
+    result = resta("ok", 2, 10)
     assert result, "La resta es incorrecta"
 
 
 def test_multiplica():
-    result = resta("ok",2, 10)
+    result = resta("ok", 2, 10)
     assert result, "La multiplicacion es incorrecta"
 
 
 def test_division():
-    result = resta("ok",2, 10)
+    result = resta("ok", 2, 10)
     assert result, "La division es incorrecta"
 
 
 def test_sumando():
-    assert suma("ok",10, 3) == 12, "La suma es incorrecta"
+    assert suma("ok", 10, 3) == 12, "La suma es incorrecta"
 
 def test_restando():
-    assert resta("ok",9, 3) == 4, "La resta es incorrecta"
+    assert resta("ok", 9, 3) == 4, "La resta es incorrecta"
 
 def test_multiplicando():
-    assert resta("ok",9, 2) == 20, "La muliplicacion es incorrecta"
+    assert resta("ok", 9, 2) == 20, "La muliplicacion es incorrecta"
 
 def test_dividiendo():
-    assert resta("ok",9, 3) == 2, "La division es incorrecta"
+    assert resta("ok", 9, 3) == 2, "La division es incorrecta"
