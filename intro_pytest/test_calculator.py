@@ -19,7 +19,7 @@ def division(self, num_a: int, num_b: int):
 
 def test_suma_valid_input():
     Calc = Calculadora()
-    result = Calc.suma(2,3)
+    result = Calc.suma(2, 3)
     assert result == 5, "el resultado es 5"
 
 
