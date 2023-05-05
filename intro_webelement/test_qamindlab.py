@@ -20,7 +20,7 @@ class TestLandingPage:
         element = self.driver.find_element(By.XPATH, "//a[normalize-space()='LABORATORIO']")
         assert element.is_displayed(),"Elemento de tiene que ser visisble"
 
-    def teardown_class(self):
+    def teardown_method(self):
         self.driver.quit()
 
 
