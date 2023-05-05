@@ -10,7 +10,7 @@ url = "https://laboratorio.qaminds.com/"
 
 class TestEjercicio01:
 
-    def open_web(self):
+    def setup_method(self):
         self.driver = webdriver.Firefox(service=firefox_service)
         self.driver.maximize_window()
         self.driver.get(url)
@@ -21,5 +21,5 @@ class TestEjercicio01:
         assert element.is_displayed(),"Elemento de tiene que ser visisble"
 
 
-    def close_web(self):
+    def teardown_method(self):
         self.driver.quit()
