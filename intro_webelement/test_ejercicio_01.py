@@ -5,15 +5,17 @@ from selenium.webdriver.common.by import By
 
 chrome_driver_path = "./drivers/geckodriver.exe"
 service = Service(chrome_driver_path)
-URL = "https://laboratorio.qaminds.com/"
+url = "https://laboratorio.qaminds.com/"
 
 
 class test_busquedaiphone:
 
     def setup_method(self):
-        self.driver = webdriver.Chrome(service=service)
+        self.driver = webdriver.Firefox(service=service)
         self.driver.maximize_window()
-        self.driver.get(URL)
+        self.driver.get(url)
+
+
 
     def test_search_iphone(self):
         time.sleep(3)
