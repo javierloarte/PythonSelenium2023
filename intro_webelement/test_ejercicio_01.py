@@ -7,7 +7,7 @@ firefox_service = Service(chrome_driver_path)
 url = "https://laboratorio.qaminds.com/"
 
 
-class Ejercicio_01:
+class TestEjercicioUno:
 
     def __init__(self):
         self.driver = None
