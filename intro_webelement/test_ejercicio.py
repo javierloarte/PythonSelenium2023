@@ -23,6 +23,10 @@ class TestEjercicio01:
         elementbtn = self.driver.find_element(By.XPATH, "//button[@class='btn btn-default btn-lg']")
         elementbtn.click()
 
-
+        # Validate course page
+        time.sleep(3)
+        # assert self.driver.current_url == "https://qamindslab.com/courses", "URL tiene que ser la de cursos"
+        elementIphone = self.driver.find_element(By.XPATH,"//img[@title='iPhone']")
+        assert elementIphone.is_displayed(), "La imagen si existe"
     def teardown_method(self):
         self.driver.quit()
