@@ -10,7 +10,6 @@ url = "https://laboratorio.qaminds.com/"
 
 class ejercicio_01:
 
-
     def __init__(self):
         self.driver = None
 
