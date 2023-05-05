@@ -1,15 +1,16 @@
 import time
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.common.by import By
 
 chrome_driver_path = "./drivers/geckodriver.exe"
 firefox_service = Service(chrome_driver_path)
 url = "https://laboratorio.qaminds.com/"
 
 
-class TestLandingPage:
+class TestEjercicio01:
 
-    def setup_method(self):
+    def open_web(self):
         self.driver = webdriver.Firefox(service=firefox_service)
         self.driver.maximize_window()
         self.driver.get(url)
@@ -20,6 +21,5 @@ class TestLandingPage:
         assert element.is_displayed(),"Elemento de tiene que ser visisble"
 
 
-
-    def teardown_method(self):
+    def close_web(self):
         self.driver.quit()
