@@ -28,5 +28,7 @@ class TestEjercicio01:
         # assert self.driver.current_url == "https://qamindslab.com/courses", "URL tiene que ser la de cursos"
         elementIphone = self.driver.find_element(By.XPATH,"//img[@title='iPhone']")
         assert elementIphone.is_displayed(), "La imagen si existe"
+        print("Validacion Correcta")
+
     def teardown_method(self):
         self.driver.quit()
