@@ -9,6 +9,9 @@ url = "https://laboratorio.qaminds.com/"
 
 class TestLandingPage:
 
+    def __init__(self):
+        self.driver = None
+
     def setup_method(self):
         self.driver = webdriver.Firefox(service=firefox_service)
         self.driver.maximize_window()
