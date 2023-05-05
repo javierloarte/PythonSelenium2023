@@ -10,7 +10,6 @@ URL = "https://qamindslab.com/"
 
 class TestLandingPage:
 
-
     def setup_method(self):
         self.driver = webdriver.Chrome(service=CHROME_SERVICE)
         self.driver.maximize_window()
