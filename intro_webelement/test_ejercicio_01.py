@@ -3,15 +3,15 @@ from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 
-CHROME_DRIVER_PATH = "./drivers/chromedriver.exe"
-CHROME_SERVICE = Service(CHROME_DRIVER_PATH)
+chrome_driver_path = "./drivers/geckodriver.exe"
+service = Service(chrome_driver_path)
 URL = "https://laboratorio.qaminds.com/"
 
 
 class test_busqueda_iphone:
 
     def setup_method(self):
-        self.driver = webdriver.Chrome(service=CHROME_SERVICE)
+        self.driver = webdriver.Chrome(service=service)
         self.driver.maximize_window()
         self.driver.get(URL)
 
@@ -21,3 +21,5 @@ class test_busqueda_iphone:
         assert element.is_displayed(),"Elemento de tiene que ser visisble"
 
 
+    def teardown_method(self):
+        self.driver.quit()
