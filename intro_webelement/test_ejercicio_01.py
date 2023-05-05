@@ -8,7 +8,7 @@ service = Service(chrome_driver_path)
 URL = "https://laboratorio.qaminds.com/"
 
 
-class test_busqueda_iphone:
+class test_busquedaiphone:
 
     def setup_method(self):
         self.driver = webdriver.Chrome(service=service)
