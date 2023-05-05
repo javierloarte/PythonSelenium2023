@@ -10,6 +10,9 @@ url = "https://laboratorio.qaminds.com/"
 class TestEjercicioUno:
 
 
+    def __init__(self):
+        self.driver = None
+
     def open_web(self):
         self.driver = webdriver.Firefox(service=firefox_service)
         self.driver.maximize_window()
