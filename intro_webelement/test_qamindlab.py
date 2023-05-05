@@ -15,3 +15,12 @@ class TestLandingPage:
         self.driver.maximize_window()
         self.driver.get(url)
 
+    def test_course_button(self):
+        time.sleep(3)
+        element = self.driver.find_element(By.XPATH, "//a[normalize-space()='LABORATORIO']")
+        assert element.is_displayed(),"Elemento de tiene que ser visisble"
+
+    def teardown_class(self):
+        self.driver.quit()
+
+
