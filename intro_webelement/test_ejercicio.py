@@ -17,8 +17,11 @@ class TestEjercicio01:
 
     def test_course_button(self):
         time.sleep(3)
-        element = self.driver.find_element(By.XPATH, "//a[normalize-space()='LABORATORIO']")
+        element = self.driver.find_element(By.XPATH, "//input[@placeholder='Search']")
         assert element.is_displayed(),"Elemento de tiene que ser visisble"
+        element.send_keys("iphone")
+        elementbtn = self.driver.find_element(By.XPATH, "//button[@class='btn btn-default btn-lg']")
+        elementbtn.click()
 
 
     def teardown_method(self):
