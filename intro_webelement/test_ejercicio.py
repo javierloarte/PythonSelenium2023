@@ -9,11 +9,11 @@ url = "https://laboratorio.qaminds.com/"
 
 class TestLandingPage:
 
-    def open_web(self):
+    def setup_method(self):
         self.driver = webdriver.Firefox(service=firefox_service)
         self.driver.maximize_window()
         self.driver.get(url)
 
 
-    def close_web(self):
+    def teardown_method(self):
         self.driver.quit()
