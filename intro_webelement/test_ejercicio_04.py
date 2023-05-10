@@ -17,10 +17,10 @@ class TestEjercicio04:
         self.driver.get(url)
 
     def test_buscaLaptop(self):
-
         # Opcion Laptops
         time.sleep(3)
         menu_lista = self.driver.find_element(By.XPATH, "//a[normalize-space()='Laptops & Notebooks']")
+        menu_lista.click()
         element = self.driver.find_element(By.XPATH, "//a[normalize-space()='Windows (0)']")
         time.sleep(1)
         element.click()
