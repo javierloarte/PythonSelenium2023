@@ -27,9 +27,22 @@ class TestEjercicio04:
 
         # Opcion No hay products
         time.sleep(3)
-        elementText = self.driver.find_element(By.XPATH, "//[@id='content']")
+        elementText = self.driver.find_element(By.XPATH, "//*[@id='content']")
         assert "no products" in elementText.text
-        print("Validacion Correcta de no productos")
+        print("Validacion Correcta  no items")
+
+        # Opcion Continuar
+        time.sleep(1)
+        elementContinua = self.driver.find_element(By.XPATH, "//a[@class='btn btn-primary']")
+        elementContinua.click()
+
+        # Ventana Home
+        time.sleep(1)
+        elementContinua = self.driver.current_url
+        print(elementContinua)
+       # assert "route=common/home" in elementContinua.text
+
+
 
     def teardown_method(self):
         self.driver.quit()
