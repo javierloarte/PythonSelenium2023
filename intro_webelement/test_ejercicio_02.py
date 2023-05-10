@@ -26,13 +26,21 @@ class TestEjercicio02:
         # Seleccionar tablet
         time.sleep(3)
         elementTablet = self.driver.find_element(By.XPATH, "//a[normalize-space()='Samsung Galaxy Tab 10.1']")
-        assert elementTablet.is_displayed, "No existe opcion"
+        assert elementTablet.is_displayed(), "No existe opcion"
         elementTablet.click()
 
         # Validar costo de item
         time.sleep(3)
         itemPrecio = self.driver.find_element(By.XPATH,"//h2[normalize-space()='$241.99']")
         assert itemPrecio.is_displayed(), "El precio no coincide"
+        print("Validacion Correcta")
+
+        # Validar costo de item
+        time.sleep(3)
+        elementAdd = self.driver.find_element(By.XPATH, "//button[@id='button-cart']")
+        elementAdd.click()
+        elementSucces = self.driver.find_element(By.XPATH, "//div[@class='alert alert-success alert-dismissible']")
+        assert elementSucces == "Success: You have added Samsung Galaxy Tab 10.1 to your shopping cart!"
         print("Validacion Correcta")
 
     def teardown_method(self):
