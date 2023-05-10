@@ -38,9 +38,10 @@ class TestEjercicio04:
 
         # Ventana Home
         time.sleep(1)
-        elementContinua = self.driver.current_url
-        print(elementContinua)
-       # assert "route=common/home" in elementContinua.text
+        elementUrl = self.driver.current_url
+        print(elementUrl)
+        assert "route=common/home" in elementUrl
+        print("Validacion Correcta de URL")
 
 
 
