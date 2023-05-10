@@ -41,7 +41,7 @@ class TestEjercicio02:
         elementAdd = self.driver.find_element(By.XPATH, "//button[@id='button-cart']")
         elementAdd.click()
         elementSucces = self.driver.find_element(By.XPATH, "//div[@class='alert alert-success alert-dismissible']")
-        assert elementSucces.is_displayed(), "No se agrego item"
+        assert "Success" in elementSucces.text
         print("Success")
 
         # Validar conteo

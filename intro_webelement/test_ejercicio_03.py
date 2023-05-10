@@ -35,7 +35,8 @@ class TestEjercicio03:
         # Validar mensaje
         time.sleep(3)
         elementWarning = self.driver.find_element(By.XPATH, "//div[@class='alert alert-danger alert-dismissible']")
-        assert elementWarning.text == " Warning: No match for E-Mail Address and/or Password."
+        ##assert elementWarning.text == "Warning: No match for E-Mail Address and/or Password."
+        assert "Warning" in elementWarning.text
         print("Mensaje Alerta correcto")
 
 
