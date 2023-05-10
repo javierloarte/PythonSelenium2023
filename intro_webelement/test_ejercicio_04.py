@@ -22,6 +22,7 @@ class TestEjercicio04:
         time.sleep(3)
         menu_lista = self.driver.find_element(By.XPATH, "//a[normalize-space()='Laptops & Notebooks']")
         element = self.driver.find_element(By.XPATH, "//a[normalize-space()='Windows (0)']")
+        time.sleep(1)
         element.click()
 
 
