@@ -40,7 +40,7 @@ class TestEjercicio02:
         elementAdd = self.driver.find_element(By.XPATH, "//button[@id='button-cart']")
         elementAdd.click()
         elementSucces = self.driver.find_element(By.XPATH, "//div[@class='alert alert-success alert-dismissible']")
-        assert elementSucces.text == "Success %%"
+        assert elementSucces.text == "Success*"
         print("Validacion Correcta")
 
     def teardown_method(self):
