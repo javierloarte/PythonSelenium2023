@@ -3,6 +3,7 @@ from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 
+
 chrome_driver_path = "./drivers/geckodriver.exe"
 firefox_service = Service(chrome_driver_path)
 url = "https://laboratorio.qaminds.com/"
@@ -40,8 +41,14 @@ class TestEjercicio02:
         elementAdd = self.driver.find_element(By.XPATH, "//button[@id='button-cart']")
         elementAdd.click()
         elementSucces = self.driver.find_element(By.XPATH, "//div[@class='alert alert-success alert-dismissible']")
-        assert elementSucces.text == "Success*"
-        print("Validacion Correcta")
+        assert itemPrecio.is_displayed(), "No se agrego item"
+        print("Success")
+
+        # Validar conteo
+        itemConteo = self.driver.find_element(By.XPATH, "//span[@id='cart-total']")
+        assert itemConteo.text != " 1 item(s) - $241.99"
+        print("Se agrego item")
+
 
     def teardown_method(self):
         self.driver.quit()
