@@ -17,7 +17,7 @@ class TestEjercicio04:
         self.driver.get(url)
 
     def test_buscaLaptop(self):
-        # Opcion Laptops
+        # Opcion Laptops / Windows
         time.sleep(3)
         menu_lista = self.driver.find_element(By.XPATH, "//a[normalize-space()='Laptops & Notebooks']")
         menu_lista.click()
@@ -25,8 +25,11 @@ class TestEjercicio04:
         time.sleep(1)
         element.click()
 
-
-
+        # Opcion No hay products
+        time.sleep(3)
+        elementText = self.driver.find_element(By.XPATH, "//[@id='content']")
+        assert "no products" in elementText.text
+        print("Validacion Correcta de no productos")
 
     def teardown_method(self):
         self.driver.quit()
