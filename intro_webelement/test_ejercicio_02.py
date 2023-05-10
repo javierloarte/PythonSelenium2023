@@ -32,7 +32,7 @@ class TestEjercicio02:
         # Validar costo de item
         time.sleep(3)
         itemPrecio = self.driver.find_element(By.XPATH,"//h2[normalize-space()='$241.99']")
-        assert itemPrecio.get_attribute("$241.99"), "El precio no coincide"
+        assert itemPrecio.is_displayed(), "El precio no coincide"
         print("Validacion Correcta")
 
     def teardown_method(self):
