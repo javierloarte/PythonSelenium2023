@@ -45,6 +45,7 @@ class TestEjercicio02:
         print("Success")
 
         # Validar conteo
+        time.sleep(3)
         itemConteo = self.driver.find_element(By.XPATH, "//span[@id='cart-total']")
         assert itemConteo.text != " 1 item(s) - $241.99"
         print("Se agrego item")
