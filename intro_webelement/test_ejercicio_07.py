@@ -25,7 +25,8 @@ class TestEjercicio04:
         select.select_by_visible_text("Volvo")
         time.sleep(1)
         select.select_by_visible_text("Audi")
-        assert "Volvo" in select
+        assert select.first_selected_option.text == "Volvo", "Validacion Erronea"
+        print(select)
 
 
 
