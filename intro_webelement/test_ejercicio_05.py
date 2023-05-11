@@ -13,9 +13,9 @@ url = "https://demoqa.com/select-menu"
 class TestLandingPage:
 
     def setup_method(self):
-        self.driver = webdriver.Chrome(service=CHROME_SERVICE)
+        self.driver = webdriver.Chrome(service=firefox_service)
         self.driver.maximize_window()
-        self.driver.get(URL)
+        self.driver.get(url)
 
     def test_old_style_select(self):
         time.sleep(2)
