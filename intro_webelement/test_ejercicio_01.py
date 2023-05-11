@@ -13,6 +13,7 @@ class TestEjercicio01:
     def setup_method(self):
         self.driver = webdriver.Firefox(service=firefox_service)
         self.driver.maximize_window()
+        self.driver.implicitly_wait(10)
         self.driver.get(url)
 
     def test_course_button(self):
