@@ -1,4 +1,3 @@
 {
-  "test_ejercicio.py::TestLandingPage::()::test_course_button": true,
-  "test_ejercicio_08.py::TestEjercicio08::()::test_Downland": true
+  "test_ejercicio.py::TestLandingPage::()::test_course_button": true
 }

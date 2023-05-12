@@ -22,9 +22,17 @@ class TestEjercicio08:
 
     def test_Downland(self):
         button = self.__find_clickable_element(By.XPATH, "//button[@id='downloadButton']")
+        button.click()
+        texto = self.__find_by_text(By.NAME, "Complete!")
+        assert "Complete" in texto
+        print(texto)
+
 
     def __find_clickable_element(self, by: By, value: str):
         return self.wait_driver.until(EC.element_to_be_clickable((by, value)))
+
+    def __find_by_text(self, by: By, value: str, text: str):
+        return self.wait_driver.until(EC.text_to_be_present_in_element((by, value), text))
 
     def teardown_method(self):
         self.driver.quit()
