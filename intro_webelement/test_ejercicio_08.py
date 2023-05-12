@@ -23,9 +23,10 @@ class TestEjercicio08:
     def test_Downland(self):
         button = self.__find_clickable_element(By.XPATH, "//button[@id='downloadButton']")
         button.click()
-        texto = self.__find_by_text(By.NAME, "Complete!")
-        assert "Complete" in texto
-        print(texto)
+        label = self.__find_by_text(By.XPATH, "//div[@class='progress-label']", "Complete!")
+        print(label)
+        element = self.driver.find_element(By.XPATH, "//div[@class='progress-label']")
+        assert "Complete" in element.text
 
 
     def __find_clickable_element(self, by: By, value: str):
