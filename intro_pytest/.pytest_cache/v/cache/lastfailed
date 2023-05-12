@@ -1,0 +1,17 @@
+{
+  "test_calculadora.py::test_dividiendo": true,
+  "test_calculadora.py::test_multiplica_valores": true,
+  "test_calculadora.py::test_multiplicando": true,
+  "test_calculadora.py::test_resta_valores": true,
+  "test_calculadora.py::test_restando": true,
+  "test_calculadora.py::test_sumatoria": true,
+  "test_calculator.py::test_dividiendo": true,
+  "test_calculator.py::test_multiplicando": true,
+  "test_calculator.py::test_restando": true,
+  "test_calculator.py::test_sumando": true,
+  "test_calculator.py::test_sumatoria": true,
+  "test_cuenta_bancaria.py::test_cuentaBancaria": true,
+  "test_hello_world.py::test_hello_world": true,
+  "test_par.py::test_negativo": true,
+  "test_suite.py::TestLogin": true
+}

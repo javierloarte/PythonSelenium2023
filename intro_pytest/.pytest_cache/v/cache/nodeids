@@ -1,0 +1,4 @@
+[
+  "test_cuenta_bancaria.py::Test_CuentaBancaria::()::test_depositar",
+  "test_cuenta_bancaria.py::Test_CuentaBancaria::()::test_retirar"
+]
