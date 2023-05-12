@@ -12,12 +12,12 @@ class TestEjercicio01:
 
     def setup_method(self):
         self.driver = webdriver.Firefox(service=firefox_service)
-        self.driver.maximize_window()
         self.driver.implicitly_wait(10)
+        self.driver.maximize_window()
         self.driver.get(url)
 
     def test_course_button(self):
-        time.sleep(3)
+
         element = self.driver.find_element(By.XPATH, "//input[@placeholder='Search']")
         assert element.is_displayed(),"Elemento de tiene que ser visisble"
         element.send_keys("iphone")
@@ -25,7 +25,7 @@ class TestEjercicio01:
         elementbtn.click()
 
         # Validate course page
-        time.sleep(3)
+        time.sleep(1)
         # assert self.driver.current_url == "https://qamindslab.com/courses", "URL tiene que ser la de cursos"
         elementIphone = self.driver.find_element(By.XPATH,"//img[@title='iPhone']")
         assert elementIphone.is_displayed(), "La imagen si existe"
