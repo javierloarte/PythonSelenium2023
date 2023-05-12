@@ -8,7 +8,7 @@ from selenium.webdriver.support import expected_conditions as EC
 
 chrome_driver_path = "./drivers/geckodriver.exe"
 firefox_service = Service(chrome_driver_path)
-url = "https://www.tomorrowland.com/home/"
+url = "https://demo.seleniumeasy.com/jquery-download-progress-bar-demo.html"
 
 
 class TestEjercicio08:
@@ -21,7 +21,10 @@ class TestEjercicio08:
         self.driver.get(url)
 
     def test_Downland(self):
-        self.__find_clickable_element(By.ID, "downloadButton")
+        button = self.__find_clickable_element(By.XPATH, "//button[@id='downloadButton']")
+
+    def __find_clickable_element(self, by: By, value: str):
+        return self.wait_driver.until(EC.element_to_be_clickable((by, value)))
 
     def teardown_method(self):
         self.driver.quit()
