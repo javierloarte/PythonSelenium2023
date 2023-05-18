@@ -1,31 +1,35 @@
-from enum import Enum
-
 from selenium.webdriver.remote.webdriver import WebDriver
+
+from config.config_handler import ConfigHandler
+from config.config_model import DriverType, ConfigData
 from factory.chrome_factory import create_driver as create_chrome_driver
 from factory.firefox_factory import create_driver as create_firefox_driver
 
 
-class DriverType(Enum):
-    """
-    List of valid and accepted drivers types.
-    """
-    CHROME = 1
-    FIREFOX = 2
-
-
-def get_driver(driver_type: DriverType) -> WebDriver:
+def get_driver(overwrite_config_path: str = None) -> WebDriver:
     """Get driver based on driver type.
-
-    :param driver_type: Driver instance type to initialize
+    :param overwrite_config_path: User custom configuration file
     :return: Web driver instance
     """
-    if type(driver_type) is not DriverType:
-        raise TypeError(f"Cannot create driver, invalid type provided: {type(driver_type)}")
-    if driver_type == DriverType.CHROME:
-        driver = create_chrome_driver()
-    elif driver_type == DriverType.FIREFOX:
-        driver = create_firefox_driver()
+    config_handler = ConfigHandler(overwrite_config_path)
+    config = config_handler.load_config()
+    return __get_driver(config)
+
+
+def __get_driver(config: ConfigData) -> WebDriver:
+    if type(config.get_driver_type()) is not DriverType:
+        raise TypeError(f"Cannot create driver, invalid type provided: {type(config.get_driver_type())}")
+    if config.get_driver_type() == DriverType.CHROME:
+        driver = create_chrome_driver(config)
+    elif config.get_driver_type() == DriverType.FIREFOX:
+        driver = create_firefox_driver(config)
     else:
-        raise NotImplementedError(f"Driver type not supported: {driver_type.name}")
-    driver.maximize_window()
+        raise NotImplementedError(f"Driver type not supported: {config.get_driver_type().name}")
+    __apply_config(driver, config)
     return driver
+
+
+def __apply_config(driver: WebDriver, config: ConfigData):
+    driver.implicitly_wait(config.get_implicit_wait())
+    if config.is_maximize():
+        driver.maximize_window()
