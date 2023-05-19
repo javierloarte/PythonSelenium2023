@@ -20,7 +20,7 @@ class ConfigData:
     def get_implicit_wait(self) -> int:
         return self.__config_dict["implicit_wait"]
 
-    def get_drivers_path(self) -> bool:
+    def get_drivers_path(self) -> str:
         return self.__config_dict["drivers_path"]
 
     def get_headless_resolution(self) -> tuple:
