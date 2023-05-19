@@ -31,7 +31,7 @@ class ConfigData:
     def is_maximize(self) -> bool:
         return self.__config_dict["maximize"]
 
-    def is_headless(self) -> bool:
+    def is_headless(self) -> str:
         return self.__config_dict["headless"]["enabled"]
 
     def is_incognito_session(self) -> bool:
