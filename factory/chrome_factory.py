@@ -10,4 +10,4 @@ def create_driver(config: ConfigData):
         chrome_options.add_argument("--incognito")
     if config.is_headless():
         chrome_options.add_argument("--headless")
-    return webdriver.Chrome(service=chrome_service, chrome_options=chrome_options)
+    return webdriver.Firefox(service=chrome_service, chrome_options=chrome_options)

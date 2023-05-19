@@ -4,10 +4,7 @@ from factory.webdriver_factory import get_driver
 
 url = "https://laboratorio.qaminds.com/"
 
-class practica01:
-
-    def __init__(self):
-        self.driver = None
+class practica:
 
     def setup_method(self):
         self.driver = get_driver()
