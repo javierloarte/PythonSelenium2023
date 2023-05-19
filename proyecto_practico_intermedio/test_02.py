@@ -5,7 +5,7 @@ from factory.webdriver_factory import get_driver
 URL = "https://laboratorio.qaminds.com/"
 
 
-class practica_02:
+class TestPractica:
 
     def setup_method(self):
         self.driver = get_driver()
