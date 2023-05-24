@@ -10,7 +10,7 @@ class TestPruebaUno:
 
     def setup_method(self):
         self.driver = get_driver()
-        self.wait_driver = WebDriverWait(self.driver, 15)
+        self.wait_driver = WebDriverWait(self.driver, 30)
         self.driver.get(URL)
 
     def test_search_display(self):
@@ -18,17 +18,20 @@ class TestPruebaUno:
         search_search = self.driver.find_element(By.NAME, "search")
         assert search_search.is_displayed() and search_search.is_enabled(), "El campo de busqueda tiene que estar visible y habilitado"
         search_search.send_keys("Display")
-
         # Seleccionar Buscar
         btnBuscar = self.driver.find_element(By.XPATH, "//i[@class='fa fa-search']")
         btnBuscar.click()
-
         # NO ObtenerResultado
-     #   self.__find_visible_element(By.XPATH, "//p[contains(text(),'There is no product that matches the search criter')]")
+        busqueda = self.driver.find_element(By.XPATH, "//input[@id='button-search']")
+        assert busqueda.is_displayed(), "Error"
+        print("PASO 2")
+
+        button = self.__find_clickable_element(By.XPATH, "//input[@id='description']")
 
         # Search in produc description
-        checkOpcion = self.driver.find_element(By.XPATH, "//input[@id='description']")
+        checkOpcion = self.driver.find_element(By.CSS_SELECTOR, "#description")
         checkOpcion.is_selected()
+        print("PASO 3")
         btnSearch = self.driver.find_element(By.XPATH, "//input[@id='button-search']")
         btnSearch.click()
     #    esperar = self.__find_visible_element(By.XPATH, "///img[@title='MacBook Pro']")
@@ -36,9 +39,8 @@ class TestPruebaUno:
 
 
 
-    def __find_visible_element(self, by: By, value: str):
-        return self.wait_driver.until(EC.visibility_of_element_located((by, value)))
-
+    def __find_clickable_element(self, by: By, value: str):
+        return self.wait_driver.until(EC.element_to_be_clickable((by, value)))
 
     def teardown_method(self):
         self.driver.quit()

@@ -1,6 +1,6 @@
 {
   "browser_name": "firefox",
-  "implicit_wait": 10,
+  "implicit_wait": 30,
   "drivers_path": "./driver/geckodriver.exe",
   "maximize": true,
   "incognito": true,
