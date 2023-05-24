@@ -1,7 +1,7 @@
 {
-  "browser_name": "chrome",
-  "implicit_wait": 10,
-  "drivers_path": "./driver/chromedriver.exe",
+  "browser_name": "firefox",
+  "implicit_wait": 60,
+  "drivers_path": "./driver/geckodriver.exe",
   "maximize": true,
   "incognito": true,
   "headless": {
