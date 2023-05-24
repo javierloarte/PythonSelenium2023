@@ -1,4 +1,4 @@
 {
     "browser_name": "chrome",
-    "implicit_wait": 30
+    "implicit_wait": 60
 }

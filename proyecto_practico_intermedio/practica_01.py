@@ -24,11 +24,8 @@ class TestPruebaUno:
         busqueda = self.driver.find_element(By.XPATH, "//input[@id='button-search']")
         assert busqueda.is_displayed(), "Error"
         print("PASO 2")
-
-
-
         # Search in produc description
-        checkOpcion = self.driver.find_element(By.CSS_SELECTOR, "#description")
+        checkOpcion = self.driver.find_element(By.XPATH, "//input[@id='description']n")
         checkOpcion.is_selected()
         print("PASO 3")
         btnSearch = self.driver.find_element(By.XPATH, "//input[@id='button-search']")
