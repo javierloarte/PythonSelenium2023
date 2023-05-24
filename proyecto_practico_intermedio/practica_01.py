@@ -10,7 +10,6 @@ class TestPruebaUno:
 
     def setup_method(self):
         self.driver = get_driver()
-        self.wait_driver = WebDriverWait(self.driver, 30)
         self.driver.get(URL)
 
     def test_search_display(self):
@@ -26,7 +25,7 @@ class TestPruebaUno:
         assert busqueda.is_displayed(), "Error"
         print("PASO 2")
 
-        button = self.__find_clickable_element(By.XPATH, "//input[@id='description']")
+
 
         # Search in produc description
         checkOpcion = self.driver.find_element(By.CSS_SELECTOR, "#description")
@@ -39,8 +38,6 @@ class TestPruebaUno:
 
 
 
-    def __find_clickable_element(self, by: By, value: str):
-        return self.wait_driver.until(EC.element_to_be_clickable((by, value)))
 
     def teardown_method(self):
         self.driver.quit()
