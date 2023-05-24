@@ -2,14 +2,14 @@ from selenium.webdriver.common.by import By
 
 from factory.webdriver_factory import get_driver
 
-URL = "https://laboratorio.qaminds.com/"
+url = "https://laboratorio.qaminds.com/"
 
 
 class TestPractico:
 
     def setup_method(self):
         self.driver = get_driver()
-        self.driver.get(URL)
+        self.driver.get(url)
 
     def test_search_display(self):
         # Escribir Iphone
