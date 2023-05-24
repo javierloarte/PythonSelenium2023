@@ -19,10 +19,10 @@ def get_driver(overwrite_config_path: str = None) -> WebDriver:
 def __get_driver(config: ConfigData) -> WebDriver:
     if type(config.get_driver_type()) is not DriverType:
         raise TypeError(f"Cannot create driver, invalid type provided: {type(config.get_driver_type())}")
-    if config.get_driver_type() == DriverType.FIREFOX:
-        driver = create_firefox_driver(config)
-    elif config.get_driver_type() == DriverType.CHROME:
+    if config.get_driver_type() == DriverType.CHROME:
         driver = create_chrome_driver(config)
+    elif config.get_driver_type() == DriverType.FIREFOX:
+        driver = create_firefox_driver(config)
     else:
         raise NotImplementedError(f"Driver type not supported: {config.get_driver_type().name}")
     __apply_config(driver, config)
