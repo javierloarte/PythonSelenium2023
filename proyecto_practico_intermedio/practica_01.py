@@ -22,7 +22,7 @@ class TestPruebaUno:
         btnBuscar.click()
         # NO ObtenerResultado
         busqueda = self.driver.find_element(By.XPATH, "//input[@id='button-search']")
-        assert busqueda.is_displayed(), "Error"
+       # assert busqueda.is_enabled(), "Error"
         print("PASO 2")
         # Search in produc description
         checkOpcion = self.driver.find_element(By.XPATH, "//input[@id='description']n")

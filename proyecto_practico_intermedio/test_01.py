@@ -18,9 +18,11 @@ class TestPractico:
         search_input.send_keys("Display")
         btnBuscar = self.driver.find_element(By.XPATH, "//i[@class='fa fa-search']")
         btnBuscar.click()
-        checkOpcion = self.driver.find_element(By.CSS_SELECTOR, "#description")
+        checkOpcion = self.driver.find_element(By.XPATH, "//input[@type='checkbox']")
+        assert checkOpcion.is_displayed(), "El campo de busqueda tiene que estar visible y habilitado"
         checkOpcion.is_selected()
         search_dos = self.driver.find_element(By.XPATH, "//input[@id='button-search']")
+        assert search_dos.is_displayed(), "El campo de busqueda tiene que estar visible y habilitado"
         search_dos.click()
 
     def teardown_method(self):
