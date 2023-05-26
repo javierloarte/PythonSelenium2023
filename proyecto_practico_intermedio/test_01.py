@@ -11,6 +11,8 @@ class TestPractico:
         self.driver = get_driver()
         self.driver.get(url)
 
+
+
     def test_search_display(self):
         # Escribir Iphone
         search_input = self.driver.find_element(By.NAME, "search")
