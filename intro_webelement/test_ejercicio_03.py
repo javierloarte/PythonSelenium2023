@@ -1,6 +1,7 @@
 import time
 from selenium import webdriver
-from selenium.webdriver.chrome.service import Service
+#from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.firefox.service import Service
 from selenium.webdriver.common.by import By
 
 
@@ -12,7 +13,7 @@ url = "https://laboratorio.qaminds.com/index.php?route=account/login"
 class TestEjercicio03:
 
     def setup_method(self):
-        self.driver = webdriver.Chrome(service=firefox_service)
+        self.driver = webdriver.Firefox(service=firefox_service)
         self.driver.maximize_window()
         self.driver.get(url)
 
