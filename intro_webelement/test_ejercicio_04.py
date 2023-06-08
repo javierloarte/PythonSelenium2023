@@ -9,10 +9,11 @@ firefox_service = Service(chrome_driver_path)
 url = "https://laboratorio.qaminds.com/"
 
 
+
 class TestEjercicio04:
 
     def setup_method(self):
-        self.driver = webdriver.Firefox(service=firefox_service)
+        self.driver = webdriver.Chrome(service=firefox_service)
         self.driver.maximize_window()
         self.driver.get(url)
 

@@ -12,7 +12,7 @@ url = "https://demoqa.com/select-menu"
 class TestEjercicio04:
 
     def setup_method(self):
-        self.driver = webdriver.Firefox(service=firefox_service)
+        self.driver = webdriver.Chrome(service=firefox_service)
         self.driver.maximize_window()
         self.driver.get(url)
 
