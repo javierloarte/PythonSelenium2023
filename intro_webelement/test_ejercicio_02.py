@@ -6,13 +6,12 @@ from selenium.webdriver.common.by import By
 
 chrome_driver_path = "./drivers/geckodriver.exe"
 firefox_service = Service(chrome_driver_path)
-url = "https://laboratorio.qaminds.com/"
-
+url = "https://demoqa.com/select-menu"
 
 class TestEjercicio02:
 
     def setup_method(self):
-        self.driver = webdriver.Firefox(service=firefox_service)
+        self.driver = webdriver.Chrome(service=firefox_service)
         self.driver.implicitly_wait(10)
         self.driver.maximize_window()
         self.driver.get(url)
