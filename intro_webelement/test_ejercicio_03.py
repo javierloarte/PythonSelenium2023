@@ -12,11 +12,12 @@ url = "https://laboratorio.qaminds.com/index.php?route=account/login"
 class TestEjercicio03:
 
     def setup_method(self):
-        self.driver = webdriver.Firefox(service=firefox_service)
+        self.driver = webdriver.Chrome(service=firefox_service)
         self.driver.maximize_window()
         self.driver.get(url)
 
-    def test_validacionLogin(self):
+
+def test_validacionLogin(self):
         # ingresar correo
         time.sleep(3)
         elementCorreo = self.driver.find_element(By.XPATH, "//input[@id='input-email']")
