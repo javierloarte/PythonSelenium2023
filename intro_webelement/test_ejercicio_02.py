@@ -6,7 +6,7 @@ from selenium.webdriver.common.by import By
 
 chrome_driver_path = "./drivers/geckodriver.exe"
 firefox_service = Service(chrome_driver_path)
-url = "https://demoqa.com/select-menu"
+url = "https://laboratorio.qaminds.com/"
 
 class TestEjercicio02:
 
