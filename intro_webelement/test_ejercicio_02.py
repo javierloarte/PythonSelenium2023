@@ -19,15 +19,15 @@ class TestEjercicio02:
     def test_buscarTablet(self):
 
         # Opcion tablet
-        time.sleep(3)
+       # time.sleep(3)
         element = self.driver.find_element(By.XPATH, "//a[normalize-space()='Tablets']")
         assert element.is_displayed(),"No se encuentra la opcion"
         element.click()
 
-        # Seleccionar tablet
+        # Validar item tablet
         time.sleep(3)
         elementTablet = self.driver.find_element(By.XPATH, "//a[normalize-space()='Samsung Galaxy Tab 10.1']")
-        assert elementTablet.is_displayed(), "No existe opcion"
+        assert elementTablet.is_displayed(), "No existe producto"
         elementTablet.click()
 
         # Validar costo de item
@@ -43,6 +43,11 @@ class TestEjercicio02:
         elementSucces = self.driver.find_element(By.XPATH, "//div[@class='alert alert-success alert-dismissible']")
         assert "Success" in elementSucces.text
         print("Success")
+
+        # Agregar a wishlist
+        time.sleep(3)
+        elementwish = self.driver.find_element(By.XPATH, "//button[@type='button']//i[@class='fa fa-heart']")
+        elementwish.click()
 
         # Validar conteo
         time.sleep(3)
