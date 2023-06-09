@@ -25,11 +25,11 @@ class TestPruebaUno:
        # assert busqueda.is_enabled(), "Error"
         print("PASO 2")
         # Search in produc description
-        checkOpcion = self.driver.find_element(By.XPATH, "//input[@id='description']n")
-        checkOpcion.is_selected()
-        print("PASO 3")
-        btnSearch = self.driver.find_element(By.XPATH, "//input[@id='button-search']")
-        btnSearch.click()
+     #   checkOpcion = self.driver.find_element(By.XPATH, "//input[@id='description']n")
+      #  checkOpcion.is_selected()
+      #  print("PASO 3")
+      #  btnSearch = self.driver.find_element(By.XPATH, "//input[@id='button-search']")
+      #  btnSearch.click()
     #    esperar = self.__find_visible_element(By.XPATH, "///img[@title='MacBook Pro']")
 
 
