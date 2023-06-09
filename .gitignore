@@ -1,8 +1,11 @@
 # Byte-compiled / optimized / DLL files
+<<<<<<< HEAD
 drivers/
 .idea/
 
 
+=======
+>>>>>>> ecdbfee895fabab05254d06f6563db7abff97256
 __pycache__/
 *.py[cod]
 *$py.class
@@ -53,7 +56,11 @@ coverage.xml
 *.cover
 *.py,cover
 .hypothesis/
+<<<<<<< HEAD
 intro_wait/.pytest_cache/
+=======
+.pytest_cache/
+>>>>>>> ecdbfee895fabab05254d06f6563db7abff97256
 
 # Translations
 *.mo
